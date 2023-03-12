@@ -17,7 +17,8 @@ function returnMovies(url){
         data.results.forEach(element =>{
             const div_card= document.createElement('div');
             div_card.setAttribute('class', 'card');
-
+            div_card.addEventListener("click", function(){
+                showOverview(`${element.overview}` )});
             const div_row= document.createElement('div');
             div_row.setAttribute('class', 'row');
 
@@ -67,4 +68,9 @@ form.addEventListener("submit", (e) => {
         search.value = "";
     }
 });
+
+
+function showOverview(overviewText){
+    alert(overviewText)
+}
 
