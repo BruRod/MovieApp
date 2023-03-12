@@ -84,3 +84,7 @@ input {
     height: 200px;
     vertical-align: top;
 }
+
+.card:hover{
+    cursor: pointer;
+}
