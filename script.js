@@ -17,8 +17,7 @@ function returnMovies(url){
         data.results.forEach(element =>{
             const div_card= document.createElement('div');
             div_card.setAttribute('class', 'card');
-            div_card.addEventListener("click", function(){
-                showOverview(`${element.overview}` )});
+            
             const div_row= document.createElement('div');
             div_row.setAttribute('class', 'row');
 
@@ -28,6 +27,9 @@ function returnMovies(url){
             const image= document.createElement('img');
             image.setAttribute('class', 'thumbnail');
             image.setAttribute('id', 'image');
+            image.addEventListener("click", function(){
+                showOverview(`${element.overview}` )});
+                
 
             const overview= document.createElement('h2');
             overview.setAttribute('id', 'overview');
@@ -44,7 +46,7 @@ function returnMovies(url){
             
 
             center.appendChild(image);
-            div_card.appendChild(center);
+            div_card.appendChild(image);
             div_card.appendChild(title);
             div_card.appendChild(overview);
             div_column.appendChild(div_card);
